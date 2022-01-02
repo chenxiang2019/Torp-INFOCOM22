@@ -1,0 +1,29 @@
+\section{Instructions}
+
+\para{Requirements}. Existing prototype depends on two libraries: \texttt{p4c}, and \texttt{bmv2}. In Ubuntu 20.04, the two libraries can be installed with the instructions at:
+
+\begin{center}
+https://github.com/p4lang/behavioral-model\#dependencies \\
+https://github.com/p4lang/p4c\#getting-started \\
+\end{center}
+
+\para{Detailed steps}. In what follows, we present detailed steps of running Torp on bmv2.
+
+\para{Step\#1}. Modify the path information in \textbf{env.sh}. You should change the value of \textbf{BMV2\_PATH} to the correct path of \texttt{bmv2} folder, e.g., \textbf{\$THIS\_DIR/../bmv2}.
+ 
+\para{Step\#2}. Change the Mininet topologic specified in \textbf{topo.txt} on your demand. The first two lines of \textbf{topo.txt} specify the number of switches and that of hosts, respectively. In the following, each line specifies a specific link between two devices. For example, ``h1 s1'' indicates that there is a link between the host h1 and the switch s1. By default, the topologic consists of a ToR switch that runs Torp, one receiver switch, one routing switch and two hosts that are directly connected to the ToR switch.
+ 
+\para{Step\#3}. Compile the P4-14 code of Torp and start Mininet with command:
+
+\begin{center}
+./run\_bmv2.sh \\
+\end{center}
+
+\noindent After that, Mininet will start the simulated topologic, where switches run Torp. 
+
+\para{Step\#4}. Exit Mininet and clean up the environment with commands:
+
+\begin{center}
+exit \\
+./cleanup.sh \\
+\end{center}

@@ -1,0 +1,167 @@
+\documentclass[10pt,sigconf,letterpaper]{acmart}
+
+\usepackage[english]{babel}
+\usepackage{blindtext}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+\setcopyright{none}
+\settopmatter{printacmref=false, printccs=false, printfolios=true}
+
+\acmDOI{}
+\acmISBN{}
+\acmPrice{}
+
+\makeatletter
+\renewcommand\@formatdoi[1]{\ignorespaces}
+\makeatother
+
+\fancyfoot{}
+
+% \acmYear{2019}
+% \copyrightyear{2019}
+% \setcopyright{acmcopyright}
+% \acmConference{EuroSys'20}{April 27-30, 2020}{Heraklion, Crete, Greece}
+% \acmPrice{TBA}
+% \acmDOI{TBA}
+% \acmISBN{TBA}
+
+\usepackage{rotating}
+%\usepackage{balance}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{listings} 
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{subcaption}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{setspace}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{natbib}
+\setcitestyle{square, comma, numbers,sort&compress, super}
+%\usepackage[square,numbers]{natbib}
+\usepackage[utf8]{inputenc}
+\usepackage{cleveref}
+\usepackage{amsthm}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{algorithmicx}
+\usepackage{amssymb}
+\usepackage{url}
+\usepackage[justification=centering]{caption}
+\usepackage{csquotes,filecontents}
+%\usepackage[style=authoryear]{biblatex}
+\usepackage{tablefootnote}
+
+%\usepackage{pifont}
+%\DeclareMathOperator*{\argmax}{\arg\!\max}% https://tex.stackexchange.com/q/83169/5764
+\algnewcommand\INPUT{\item[\textbf{Input:}]}%
+\algnewcommand\OUTPUT{\item[\textbf{Output:}]}%
+\newcommand{\algorithmicbreak}{\textbf{break}}
+\newcommand{\BREAK}{\State \algorithmicbreak}
+
+\renewcommand\footnotetextcopyrightpermission[1]{}
+
+\crefname{section}{§}{§§}
+\Crefname{section}{§}{§§}
+
+%\usepackage{subcaption}
+%\usepackage[caption=false]{subfig}
+
+\def \hfillx {\hspace*{-\textwidth} \hfill}
+
+\renewcommand\and{\\[\baselineskip]}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem*{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+\newtheorem{conj}{Conjecture}[section]
+\newtheorem{exmp}{Example}[section]
+
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+\newtheorem*{note}{Note}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+%\setlist{nolistsep}
+
+% comment these floats 
+% \setlength{\textfloatsep}{15pt}
+% \setlength{\floatsep}{7pt}
+% \setlength{\intextsep}{7pt}
+% \setlength{\columnsep}{0.30in}
+
+
+%\setlength{\paperheight}{11in}
+%\setlength{\paperwidth}{8.5in}
+%\usepackage[pass,pdftex]{geometry}
+
+%\include{mathpmtc}
+
+%\setlength{\hoffset}{0in}
+%\setlength{\voffset}{0in}
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\evensidemargin}{0in}
+%\setlength{\topmargin}{0in}
+%\setlength{\headheight}{0in}
+%\setlength{\headsep}{0in}
+%\setlength{\textwidth}{6.5in}
+%\setlength{\textheight}{9in}
+%\setlength{\marginparsep}{0pt}
+%\setlength{\marginparwidth}{0pt}
+%\parskip=0.1\baselineskip
+
+% limit hyphenation
+%\hyphenpenalty=1000
+\tolerance=1000
+
+\newcommand{\para}[1]{\smallskip\noindent\textbf{#1}}
+\newcommand{\cut}[1]{}
+\newcommand{\etal}{{\em et al.}}
+\newcommand{\vx}{\mathbf{x}}
+\newcommand{\vy}{\mathbf{y}}
+\newcommand{\sk}{\mathop{\rm sk}}
+\newcommand{\mH}{H^*}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+
+\hyphenation{ApproSync}
+
+\pagestyle{plain}
+
+\setlist{nolistsep}
+\setlength{\textfloatsep}{13pt}
+\setlength{\floatsep}{7pt}
+\setlength{\intextsep}{7pt}
+
+\begin{document}
+
+% remove paper title from each page
+\title[]{Run Torp on BMv2}
+%via Approximate Synchronization
+
+% \author{Paper\#241, 16 pages}
+% remove author information from each page
+\renewcommand{\shortauthors}{}
+
+\maketitle
+
+\input{bmv2}
+
+% that's all folks
+\end{document}
+
